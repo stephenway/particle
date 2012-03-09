@@ -1,0 +1,18 @@
+$default-drop-shadow-color:    #aaa !default;
+$default-drop-shadow-h-offset: 0px  !default;
+$default-drop-shadow-v-offset: 0px  !default;
+$default-drop-shadow-blur:     1px  !default;
+
+@mixin drop-shadow(
+	$color: $default-drop-shadow-color,
+	$offX: $default-drop-shadow-h-offset,
+	$offY: $default-drop-shadow-v-offset,
+	$blur: $default-drop-shadow-blur
+) {
+	@if $color == none {
+		text-shadow: none;
+	} @else {
+		text-shadow: $color $offX $offY $blur;
+		filter: dropshadow(color=#{$color}, offX=#{$offX}, offY=#{$offY});
+	}
+}

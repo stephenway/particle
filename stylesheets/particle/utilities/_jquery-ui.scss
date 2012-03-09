@@ -1,0 +1,142 @@
+@import "compass/css3", "compass/utilities";
+@import "particle/css3/gradient";
+@import "particle/css3/drop-shadow";
+@import "particle/typography/render-fix";
+@import "particle/utilities/user";
+
+$default-jqueryui-base-color: #bec6cc !default;
+
+@mixin jquery-ui($base-color: $default-jqueryui-base-color) {
+  #dialog_link {
+    padding: 0.4em 1em 0.4em 20px;
+    text-decoration: none;
+    position: relative;
+    span.ui-icon {
+      margin: 0 5px 0 0;
+      position: absolute;
+      left: 0.2em;
+      top: 50%;
+      margin-top: -8px; } }
+
+  ul#icons {
+    margin: 0;
+    padding: 0;
+    li {
+      margin: 2px;
+      position: relative;
+      padding: 4px 0;
+      cursor: pointer;
+      float: left;
+      list-style: none; }
+    span.ui-icon {
+      float: left;
+      margin: 0 4px; } }
+
+  // UI.TabsView
+  #tabs, #tabsMobile {
+    padding: 0 !important;
+    @include gradient(#fefffe, #e6e6e6);
+    @include text-shadow(white 0 1px 0);
+    @include box-shadow(darken($base-color, 20) 0 0 2px, inset white 0 -1px 1px);
+    ul {
+      @include border-bottom-radius(0px);
+      border-top: none !important;
+      border-right: none !important;
+      border-bottom: #777777 1px solid !important;
+      border-left: none !important; } }
+
+  #tabsMobile {
+    ul li {
+      display: inline;
+      float: none;
+      &.ui-state-active a {
+        color: #005ae4; } } }
+
+  // UI.ButtonView
+  button.ui-button {
+    @include border-radius(30px); }
+
+  .ui-button {
+    @include gradient(#fefffe, #e6e6e6);
+    @include text-shadow(white 0 1px 0);
+    @include box-shadow(darken($base-color, 20) 0 0 2px, inset white 0 -1px 1px);
+    color: black;
+    border: darken($base-color, 15) 1px solid !important;
+    padding: 0 !important;
+    height: 30px !important;
+    width: 153px;
+    margin-bottom: 5px;
+    &.ui-state-hover {
+      border: darken($base-color, 15) 1px solid !important; }
+    &:active {
+      @include gradient(#444444, #999999);
+      @include text-shadow(black 0 -1px 0);
+      @include box-shadow(darken($base-color, 20) 0 0 2px, inset lighten(#999999, 15) 0 -1px 1px);
+      color: white; }
+    &.ui-disabled {
+      @include user-select;
+      @include opacity(0.5);
+      cursor: default;
+      &:active {
+        @include gradient(#fefffe, #e6e6e6);
+        @include text-shadow(white 0 1px 0);
+        @include box-shadow(darken($base-color, 20) 0 0 2px, inset white 0 -1px 1px);
+        color: black; } }
+    &.ui-default {
+      @include gradient(#62c1fc, #1f4cff);
+      @include text-shadow(#1f4cff 0 -1px 0);
+      @include box-shadow(darken($base-color, 20) 0 0 2px, inset #62c1fc 0 -1px 3px);
+      color: white;
+      border: #153987 1px solid !important;
+      &:active {
+        @include gradient(#12183c, #39568f);
+        @include text-shadow(#4264a4 0 -1px, 0);
+        @include box-shadow(darken($base-color, 20) 0 0 2px, inset #4571df 0 -1px 1px);
+        color: white; }
+      &.ui-disabled:active {
+        @include gradient(#62c1fc, #1f4cff);
+        @include text-shadow(#1f4cff 0 -1px 0);
+        @include box-shadow(darken($base-color, 20) 0 0 2px, inset #62c1fc 0 -1px 3px);
+        color: white;
+        border: #153987 1px solid !important; } } }
+
+  .ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+
+  #radio {
+    label.ui-state-active {
+      @include gradient(#62c1fc, #1f4cff);
+      @include text-shadow(#1f4cff 0 -1px 0);
+      @include box-shadow(darken($base-color, 20) 0 0 2px, inset #62c1fc 0 -1px 3px);
+      color: white;
+      border: #153987 1px solid !important; } }
+
+  .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
+    @include gradient-bg(#e8e8e8, 15); }
+
+  .ui-widget-overlay {
+    background-color: $base-color;
+    background-image: none; }
+
+  #slider.ui-slider-horizontal {
+    border: #999999 1px solid;
+    @include border-radius(20px);
+    @include gradient-inverse-bg(darken($base-color, 20), 10, 30);
+    @include box-shadow(lighten($base-color, 20) 0 1px 1px);
+    .ui-slider-range {
+      @include gradient-inverse-bg(darken(#d2d2d6, 5), 10, 30); }
+    .ui-slider-handle {
+      @include border-radius(20px);
+      @include gradient(#fefffe, #d2d2d6);
+      @include box-shadow(darken($base-color, 20) 0 2px 2px, inset white 0 -1px 1px);
+      border: darken($base-color, 20) 1px solid !important;
+      &:active {
+        @include gradient-bg(#666666, 15);
+        @include box-shadow(darken($base-color, 20) 0 2px 2px, inset black 0 -1px 1px);
+        border: darken($base-color, 40) 1px solid !important; } } }
+
+  .ui-progressbar-value {
+    @include gradient(#62c1fc, #1f4cff); }
+}

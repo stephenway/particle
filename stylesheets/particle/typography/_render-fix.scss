@@ -1,0 +1,19 @@
+// These defaults make the arguments optional for this mixin
+// If you like, set different defaults in your project
+
+$default-font-smoothing: antialiased !default;
+$default-max-device-width: 480px !default;
+
+// Provides a single webkit attribute.
+// Includes default argument for smoothing
+@mixin render-fix($smoothing: $default-font-smoothing) {
+  -webkit-font-smoothing: $smoothing;
+} //@mixin…
+
+@mixin mobile-render-fix() {
+  @media only screen and (max-device-width:480px) {
+    body {
+      -webkit-text-stroke: 0 black;
+    } //body
+  } //@media…
+} //@mixin…

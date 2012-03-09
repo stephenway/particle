@@ -1,0 +1,24 @@
+@import "compass/css3/border-radius";
+
+@mixin contact-button($bgcolor: #494949, $color: white) {
+  .custom_button {
+    @include border-radius(4px);
+    background-color: $bgcolor;
+    border: none;
+    color: $color;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    width: 170px;
+    margin-bottom: 20px;
+    &:hover {
+      background-color: lighten($bgcolor, 20);
+    } //&:hover
+    strong {
+      display: block;
+      font-size: 20px;
+      font-weight: normal;
+      letter-spacing: 1px;
+    } //strong
+  } //.custom_button
+} //@mixin…

@@ -1,0 +1,45 @@
+Particle
+====================
+
+This utility will save you a lot of time with simple imports.
+
+
+Installation
+============
+
+From the command line:
+
+    (sudo) gem install particle.gem
+
+Add to a project:
+
+    // rails: compass.config, other: config.rb
+    require 'particle'
+
+    // command line
+    compass install particle
+    
+Or create a new project:
+
+    compass -r particle -f particle project_directory
+
+
+Particles
+==========
+
+
+Portal.scss
+===================
+
+But why would you use my styles when you can create your own? For simple 
+importing without any styling at all, you can use the simple `particle` mixin:
+
+    @include particle;
+    
+I'll warn you, it's ugly until you add some style, but adding style isn't hard.
+
+
+Available Variables and Mixins
+=============================
+
+

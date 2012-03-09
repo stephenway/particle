@@ -1,0 +1,25 @@
+/*
+Theme Name:         Example Portal
+Theme URI:          http://www.agencyrevolution.com/
+Description:        A Portal Stylesheet Treated with Particles.
+Author:             Stephen Way
+Author URI:         http://swy.me/
+*/
+
+// Compass Imports First
+@import "compass/css3", "compass/utilities";
+
+// Particle Imports Second
+@import "particle/utilities/basic";
+@import "particle/layout/navigation/classic";
+@import "particle/layout/aside";
+@import "particle/layout/charlie/blue";
+@import "particle/reset";
+
+// Color Pallet and Theme
+$primary-color: #ffffff;
+$secondary-color: #e2e2e2;
+$tertiary-color: #999999;
+
+// Site Specific Styles
+@include charlie;
