@@ -1,8 +1,6 @@
 @import "compass/css3/box-shadow";
 @import "compass/css3/text-shadow";
 
-$p: "/Portals/_assets/images";
-
 @mixin nivo {
 	/*
 	 * jQuery Nivo Slider v2.6
@@ -119,7 +117,7 @@ $p: "/Portals/_assets/images";
 	.nivoSlider {
 		@include box-shadow(#4a4a4a 0 1px 5px 0);
 		position: relative;
-		background: white url("#{$p}/nivo_default_loading.gif") no-repeat 50% 50%;
+		background: white url("nivo_default_loading.gif") no-repeat 50% 50%;
 	}
 	.nivoSlider img {
 		position: absolute;
@@ -142,7 +140,7 @@ $p: "/Portals/_assets/images";
 		display: block;
 		width: 22px;
 		height: 22px;
-		background: url("#{$p}/nivo_default_bullets.png") no-repeat;
+		background: url("nivo_default_bullets.png") no-repeat;
 		text-indent: -9999px;
 		border: 0;
 		margin-right: 3px;
@@ -156,7 +154,7 @@ $p: "/Portals/_assets/images";
 		display: block;
 		width: 30px;
 		height: 30px;
-		background: url("#{$p}/nivo_default_arrows.png") no-repeat;
+		background: url("nivo_default_arrows.png") no-repeat;
 		text-indent: -9999px;
 		border: 0;
 	}
@@ -194,7 +192,7 @@ $p: "/Portals/_assets/images";
 	*/
 
 	.slider-wrapper {
-		background: url("#{$p}/nivo_orman_slider.png") no-repeat;
+		background: url("nivo_orman_slider.png") no-repeat;
 		width: 722px;
 		height: 337px;
 		margin: 0 auto;
@@ -207,7 +205,7 @@ $p: "/Portals/_assets/images";
 		width: 568px;
 		height: 268px;
 		margin-left: 77px;
-		background: url("#{$p}/nivo_orman_loading.gif") no-repeat 50% 50%;
+		background: url("nivo_orman_loading.gif") no-repeat 50% 50%;
 	}
 	.nivoSlider img {
 		position: absolute;
@@ -232,7 +230,7 @@ $p: "/Portals/_assets/images";
 		display: block;
 		width: 10px;
 		height: 10px;
-		background: url("#{$p}/nivo_orman_bullets.png") no-repeat;
+		background: url("nivo_orman_bullets.png") no-repeat;
 		text-indent: -9999px;
 		border: 0;
 		margin-right: 7px;
@@ -246,7 +244,7 @@ $p: "/Portals/_assets/images";
 		display: block;
 		width: 25px;
 		height: 200px;
-		background: url("#{$p}/nivo_orman_arrows.png") no-repeat 0% 50%;
+		background: url("nivo_orman_arrows.png") no-repeat 0% 50%;
 		text-indent: -9999px;
 		border: 0;
 		top: 40px;
@@ -273,7 +271,7 @@ $p: "/Portals/_assets/images";
 	}
 
 	.ribbon {
-		background: url("#{$p}/nivo_orman_ribbon.png") no-repeat;
+		background: url("nivo_orman_ribbon.png") no-repeat;
 		width: 111px;
 		height: 111px;
 		position: absolute;
@@ -297,7 +295,7 @@ $p: "/Portals/_assets/images";
 	*/
 
 	.slider-wrapper {
-		background: url("#{$p}/nivo_pascal_slider.png") no-repeat;
+		background: url("nivo_pascal_slider.png") no-repeat;
 		width: 668px;
 		height: 299px;
 		margin: 0 auto;
@@ -310,7 +308,7 @@ $p: "/Portals/_assets/images";
 		width: 630px;
 		height: 235px;
 		margin-left: 19px;
-		background: url("#{$p}/nivo_pascal_loading.gif") no-repeat 50% 50%;
+		background: url("nivo_pascal_loading.gif") no-repeat 50% 50%;
 	}
 	.nivoSlider img {
 		position: absolute;
@@ -326,7 +324,7 @@ $p: "/Portals/_assets/images";
 	}
 
 	.nivo-controlNav {
-		background: url("#{$p}/nivo_pascal_controlnav.png") no-repeat;
+		background: url("nivo_pascal_controlnav.png") no-repeat;
 		width: 251px;
 		height: 40px;
 		position: absolute;
@@ -339,7 +337,7 @@ $p: "/Portals/_assets/images";
 		display: block;
 		width: 22px;
 		height: 22px;
-		background: url("#{$p}/nivo_pascal_bullets.png") no-repeat;
+		background: url("nivo_pascal_bullets.png") no-repeat;
 		text-indent: -9999px;
 		border: 0;
 		margin-right: 3px;
@@ -380,7 +378,7 @@ $p: "/Portals/_assets/images";
 	}
 
 	.ribbon {
-		background: url("#{$p}/nivo_pascal_ribbon.png") no-repeat;
+		background: url("nivo_pascal_ribbon.png") no-repeat;
 		width: 111px;
 		height: 111px;
 		position: absolute;
@@ -395,7 +393,7 @@ $p: "/Portals/_assets/images";
 		position: relative;
 		height: 320px;
 		width: 510px;
-		background: url("#{$p}/nivo-loading.gif") no-repeat 50% 50%;
+		background: url("nivo-loading.gif") no-repeat 50% 50%;
 		border-top: 1px solid darken($secondary-color, 5);
 		img {
 			position: absolute;
@@ -468,7 +466,7 @@ $p: "/Portals/_assets/images";
 		top: 45%;;
 		width: 30px;
 		height: 30px;
-		background: url("#{$p}/nivo-arrows.png") no-repeat 0 0 transparent;
+		background: url("nivo-arrows.png") no-repeat 0 0 transparent;
 		text-indent: -9999px;
 		border: 0;
 		z-index: 2;
@@ -491,7 +489,7 @@ $p: "/Portals/_assets/images";
 			display: block;
 			width: 10px;
 			height: 10px;
-			background: url("#{$p}/nivo-bullets.png") no-repeat 0 0 transparent;
+			background: url("nivo-bullets.png") no-repeat 0 0 transparent;
 			text-indent: -9999px;
 			border: 0;
 			margin-right: 3px;
