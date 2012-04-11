@@ -1,7 +1,7 @@
 @import "compass/css3/images";
 
 // Noise Mixin
-@mixin noise($color: #fff, $color2: false, $intensity: 0.02, $image: noise.jpg) {
+@mixin noise($color: #fff, $color2: false, $intensity: 0.02, $image: "noise.jpg") {
 	background: $color;
 	$color: transparentize($color, $intensity);
 	@if $color2 == false {
