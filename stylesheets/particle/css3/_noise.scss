@@ -1,7 +1,7 @@
 @import "compass/css3/images";
 
 // Noise Mixin
-@mixin noise($color: #fff, $color2: false, $intensity: 0.02) {
+@mixin noise($color: #fff, $color2: false, $intensity: 0.02, $image: noise.jpg) {
 	background: $color;
 	$color: transparentize($color, $intensity);
 	@if $color2 == false {
@@ -9,5 +9,5 @@
 	} @else {
 		$color2: transparentize($color2, $intensity);
 	}
-	@include background(linear-gradient(top, $color, $color2), inline-image("noise.jpg"));
+	@include background(linear-gradient(top, $color, $color2), inline-image("#{$image}"));
 } //@mixin…
