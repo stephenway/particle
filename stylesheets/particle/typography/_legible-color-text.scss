@@ -3,4 +3,4 @@ $default-legible-background-color: black !default;
 @mixin legible-color-text($background-color: $default-legible-background-color){
 	@if lightness($background-color) > 50% {color: black;}
 	@if lightness($background-color) <= 50% {color: white;}
-} //@mixin
+}

@@ -8,12 +8,12 @@ $default-max-device-width: 480px !default;
 // Includes default argument for smoothing
 @mixin render-fix($smoothing: $default-font-smoothing) {
   -webkit-font-smoothing: $smoothing;
-} //@mixin…
+}
 
 @mixin mobile-render-fix() {
   @media only screen and (max-device-width:480px) {
     body {
       -webkit-text-stroke: 0 black;
-    } //body
-  } //@media…
-} //@mixin…
+    }
+  }
+}

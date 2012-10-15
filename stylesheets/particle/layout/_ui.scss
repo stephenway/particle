@@ -6,6 +6,17 @@
 @import "compass/css3/inline-block";
 @import "compass/css3/images";
 
+$link   : '&:link, &:visited';
+$focus  : '&:hover, &:focus, &:active';
+
+$lte9   : '.ie8 &, .ie7 &';
+$lte10  : '.ie9 &, .ie8 &, .ie7 &';
+
+// Modernizr Browser Selectors
+$lte8m  : '.not-box-sizing &';
+$lte9m  : '.not-rgba &';
+$lte10m : '.not-css-gradients &';
+
 @mixin ui {
 	.ui-dialog {
 		@include border-radius(8px);
@@ -164,30 +175,4 @@
 			} //.ie8 &
 		} //&.rotate-left
 	} //.ui-photo
-	.mr_btn {
-		@include border-radius(2px);
-		@include box-shadow(rgba(0, 0, 0, 0.15) 0 1px 3px);
-		background: url("../_assets/images/btn-lg-bg.png") repeat-x 0 0 !important;
-		border: #6e93b0 solid 1px !important;
-		color: #234e70 !important;
-		cursor: pointer !important;
-		display: block;
-		font-size: 1.1em !important;
-		font-weight: bold !important;
-		height: 39px !important;
-		line-height: 1.4 !important;
-		margin: 10px 0 5px;
-		overflow: hidden !important;
-		padding-top: 3px !important;
-		text-shadow: rgba(255, 255, 255, 0.5) 0 1px 0 !important;
-		text-decoration: none !important;
-		&:active {
-			background-position: 0px bottom !important;
-		} //&:active
-	} //.mr_btn
-	a.mr_btn {
-		width: 125px !important;
-		height: 28px !important;
-		text-align: center !important;
-	} //a&
 }

@@ -1,0 +1,10 @@
+/*
+ * Example Particle Stylsheet
+ */
+
+@import "compass/css3"
+		"particle/css3";
+
+body {
+	@include gradient-bg(#FFFFFF, #999999);
+}

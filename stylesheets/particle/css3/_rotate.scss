@@ -1,0 +1,12 @@
+//
+// Source: https://gist.github.com/3859980
+//
+
+@mixin ms-rotate($degrees) {
+  @if (not unitless($degrees)) { $degrees: $degrees / 1deg }
+  $deg2rad: pi() * 2 / 360;
+  $radians: $degrees * $deg2rad;
+  $costheta: cos($radians);
+  $sintheta: sin($radians);
+  filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=#{$costheta}, M12=#{-$sintheta}, M21=#{$sintheta}, M22=#{$costheta});
+}

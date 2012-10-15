@@ -1,17 +1,17 @@
 Particle
 --------
 
-This is my Sass playground, enjoy! It's a compass plugin and has an assortment of handy tools.
+This is my Sass playground, enjoy! It's a compass plugin and has an assortment of handy tools and libraries.
 
 ##Installation
 
 From the command line:
 
 ```
-gem install ~/path/to/particle.gem
+gem install particle
 ```
 
-Add to a project:
+Add to your project:
 
 Rails: compass.config, config.rb
 

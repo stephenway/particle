@@ -1,9 +1,0 @@
-@import "compass/css3/shared";
-
-$default-user-drag: none !default;
-
-@mixin user-drag($drag: $default-user-drag) {
-  @include experimental(user-drag, $drag,
-    -moz, -webkit, not -o, not -ms, not -khtml, official
-  );
-} //@mixin…

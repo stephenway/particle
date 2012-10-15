@@ -1,0 +1,220 @@
+@import "compass/css3/border-radius";
+
+$default-carousel-path: "images" !default;
+$items: 5;
+$default-carousel-orientation: horizontal !default;
+$default-carousel-bg-color: transparent !default;
+$default-carousel-title-color: #000000 !default;
+$default-carousel-item-size: 120px !default;
+$default-carousel-height: $default-carousel-item-size !default;
+$default-carousel-margin: 40px !default;
+$default-carousel-compound-item-size: $default-carousel-item-size + $default-carousel-margin;
+$default-carousel-width: $default-carousel-compound-item-size * $items !default;
+
+@mixin jcarousel-skin-tango(
+	$carousel-path: $default-carousel-path,
+	$carousel-orientation: $default-carousel-orientation,
+	$carousel-bg-color: $default-carousel-bg-color,
+	$carousel-title-color: $default-carousel-title-color,
+	$carousel-item-size: $default-carousel-item-size,
+	$carousel-height: $default-carousel-height,
+	$carousel-margin: $default-carousel-margin,
+	$carousel-width: $default-carousel-width
+) {
+	.jcarousel-skin-tango {
+		> div {
+			@include border-radius(10px);
+			background: $carousel-bg-color;
+			margin: 0 auto;
+			@if $carousel-orientation == horizontal {
+				width: $carousel-width;
+				padding: 20px 40px;
+			}
+			@if $carousel-orientation == vertical {
+				width: $carousel-height;
+				height: $carousel-width;
+				padding: 40px 20px;
+			}
+			.jcarousel-direction-rtl {
+				direction: rtl;
+				@if $carousel-orientation == horizontal {
+					.jcarousel-item {
+						margin-left: 10px;
+						margin-right: 0;
+					}
+				}
+			}
+			.jcarousel-clip {
+				overflow: hidden;
+				@if $carousel-orientation == horizontal {
+					width: $carousel-width;
+					height: $carousel-height+5px;
+				}
+				@if $carousel-orientation == vertical {
+					width: $carousel-height;
+					height: $carousel-width;
+				}
+				.jcarousel-list {
+					height: $carousel-height+5px;
+				}
+			}
+			> div {
+				> ul {
+					> li { //.jcarousel-item {
+						&, > div {
+							width: $carousel-item-size;
+							height: $carousel-item-size;
+						}
+						a span {
+							cursor: pointer;
+						}
+						@if $carousel-orientation == horizontal {
+							margin-left: $carousel-margin/2;
+							margin-right: $carousel-margin/2;
+							a span {
+								width: $carousel-item-size;
+							}
+						}
+						@if $carousel-orientation == vertical {
+							margin-bottom: 10px;
+						}
+					}
+				}
+			}
+
+			.jcarousel-item-placeholder {
+				background-color: $carousel-bg-color;
+				color: $carousel-title-color;
+			}
+
+			.jcarousel-next {
+				position: absolute;
+				width: 32px;
+				height: 32px;
+				cursor: pointer;
+				background-color: transparent;
+				background-repeat: no-repeat;
+				background-position: 0 0;
+				@if $carousel-orientation == horizontal {
+					top: $carousel-item-size/2;
+					right: 5px;
+					background-image: url("$carousel-path/images/next-horizontal.png");
+					.jcarousel-direction-rtl & {
+						left: 5px;
+						right: auto;
+						background-image: url("$carousel-path/images/prev-horizontal.png");
+					}
+					&:hover, &:focus {
+						background-position: -32px 0;
+					}
+					&:active {
+						background-position: -64px 0;
+					}
+				}
+				@if $carousel-orientation == vertical {
+					bottom: 5px;
+					left: $carousel-item-size/2;
+					background-image: url("$carousel-path/images/next-vertical.png");
+					&:hover, &:focus {
+						background-position: 0 -32px;
+					}
+					&:active {
+						background-position: 0 -64px;
+					}
+				}
+			}
+
+			.jcarousel-next-disabled-horizontal {
+				&, &:hover, &:focus, &:active {
+					cursor: default;
+					background-position: -96px 0;
+				}
+			}
+
+			.jcarousel-next-disabled-vertical {
+				&, &:hover, &:focus, &:active {
+					cursor: default;
+					background-position: 0 -96px;
+				}
+			}
+
+			.jcarousel-prev {
+				position: absolute;
+				width: 32px;
+				height: 32px;
+				cursor: pointer;
+				background-color: transparent;
+				background-repeat: no-repeat;
+				background-position: 0 0;
+				@if $carousel-orientation == horizontal {
+					top: $carousel-item-size/2;
+					left: 5px;
+					background-image: url("$carousel-path/images/prev-horizontal.png");
+					.jcarousel-direction-rtl & {
+						left: auto;
+						right: 5px;
+						background-image: url("$carousel-path/images/next-horizontal.png");
+					}
+					&:hover, &:focus {
+						background-position: -32px 0;
+					}
+					&:active {
+						background-position: -64px 0;
+					}
+				}
+				@if $carousel-orientation == vertical {
+					top: 5px;
+					left: $carousel-item-size/2;
+					background-image: url("$carousel-path/images/prev-vertical.png");
+					&:hover, &:focus {
+						background-position: 0 -32px;
+					}
+					&:active {
+						background-position: 0 -64px;
+					}
+				}
+			}
+
+			.jcarousel-prev-disabled-horizontal {
+				&, &:hover, &:focus, &:active {
+					cursor: default;
+					background-position: -96px 0;
+				}
+			}
+
+			.jcarousel-prev-disabled-vertical {
+				&, &:hover, &:focus, &:active {
+					cursor: default;
+					background-position: 0 -96px;
+				}
+			}
+		}
+	}
+}
+
+@mixin jcarousel-box-model {
+	.jcarousel-skin-tango {
+		ul li { //.jcarousel-item {
+			> div {
+				position: relative;
+			}
+			a span {
+				position: absolute;
+				bottom: 0;
+				font-size: 18px;
+				display: block;
+				padding: 5px 0;
+			}
+			a img {
+				width: $default-carousel-item-size;
+				height: $default-carousel-item-size;
+			}
+		}
+	}
+}
+
+
+
+
+
+
