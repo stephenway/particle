@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   # Release Specific Information
-  s.version = "1.0"
-  s.date = "2012-10-15"
+  s.version = "1.1"
+  s.date = "2012-12-20"
 
   # Gem Details
   s.name = "particle"
@@ -20,5 +20,6 @@ Gem::Specification.new do |s|
   # Gem Bookkeeping
   s.has_rdoc = false
   s.rubygems_version = %q{1.8.24}
+  s.add_dependency("sass", [">= 3.2.3"])
   s.add_dependency("compass", [">= 0.12.2"])
 end
