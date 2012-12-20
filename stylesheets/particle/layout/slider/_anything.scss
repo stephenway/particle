@@ -130,7 +130,7 @@ $default-anythingSlider-path: "images" !default;
 		width: 45px;
 		text-align: center;
 		outline: 0;
-		background: url("#{$path}/default.png") no-repeat;
+		background: url("default.png") no-repeat;
 	}
 	/* hide text, target the span so IE7 doesn't text-indent the link */
 	div.anythingSlider .arrow a span { display: block; visibility: hidden; }
@@ -157,7 +157,7 @@ $default-anythingSlider-path: "images" !default;
 		padding: 2px 8px;
 		height: 18px;
 		margin: 0 5px 0 0;
-		background-image: url("#{$path}/default.png");
+		background-image: url("default.png");
 		background-position: center -288px ;
 		background-repeat: repeat-x;
 		text-align: center;
@@ -181,7 +181,7 @@ $default-anythingSlider-path: "images" !default;
 	/* Autoplay Start/Stop button */
 	div.anythingSlider .start-stop {
 		@include border-bottom-radius(5px);
-		background-image: url("#{$path}/default.png");
+		background-image: url("default.png");
 		background-position: center -288px;
 		background-repeat: repeat-x;
 		padding: 2px 5px;
@@ -258,7 +258,7 @@ $default-anythingSlider-path: "images" !default;
 		margin-top: -47px; /* half height of image */
 		width: 45px;
 		outline: 0;
-		background: url("#{$path}/arrows-metallic.png") no-repeat;
+		background: url("arrows-metallic.png") no-repeat;
 	}
 
 	div.anythingSlider-metallic .forward { right: 0; }
@@ -298,7 +298,7 @@ $default-anythingSlider-path: "images" !default;
 	}
 
 	div.anythingSlider-metallic .anythingControls ul a:hover, div.anythingSlider-metallic .anythingControls ul a.cur {
-		background: transparent url("#{$path}/arrows-metallic.png") -76px -57px no-repeat;
+		background: transparent url("arrows-metallic.png") -76px -57px no-repeat;
 	}
 
 	/* Navigation size window arrows */

@@ -13,7 +13,7 @@ $default-tinySlider-path: "images" !default;
 			position: relative;
 		}
 		.buttons { 
-			background: url("#{$path}/tinySliderArrows.png") no-repeat scroll 0 0 transparent;
+			background: url("tinySliderArrows.png") no-repeat scroll 0 0 transparent;
 			display: block;
 			margin: 45px 10px 0 0; 
 			background-position: 0 -38px;
